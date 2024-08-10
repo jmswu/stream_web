@@ -1,7 +1,9 @@
 # Python env #
+
 `Python 3.12.3`
 
-# Dependancies #
+## Dependancies ##
+
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
