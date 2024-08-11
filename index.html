@@ -11,10 +11,23 @@
 <body>
     <div class="container">
         <h1>Hello, World!</h1>
-        <form>
-            <input type="text" name="search_input" placeholder="Enter something..." required>
+        <form id="my_form">
+            <input type="text" name="search_input" id="search_input" placeholder="Enter something..." required>
+            <button type="submit">Submit</button>
         </form>
+
+        <script>
+            document.getElementById('my_form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+
+                var inputValue = document.getElementById('search_input').value;
+                alert('You entered: ' + inputValue);
+
+                // You can now send this value to a server or handle it in any way you like
+            });
+        </script>
     </div>
+
 </body>
 
 </html>
