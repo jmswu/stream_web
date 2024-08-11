@@ -13,18 +13,17 @@
         <h1>Stream</h1>
         <form id="myForm">
             <input type="text" name="searchInput" id="searchInput" placeholder="Enter something..." required>
-            <button type="submit">Submit</button>
+            <button type="click">Submit</button>
         </form>
 
         <script>
-            document.getElementById("myForm").addEventListener("submit", function (event) {
+            document.getElementById("myForm").addEventListener("click", function (event) {
                 event.preventDefault(); // Prevent the form from submitting normally
 
                 var inputValue = document.getElementById('searchInput').value;
                 // alert('You entered: ' + inputValue);
 
                 // You can now send this value to a server or handle it in any way you like
-                console.log("You entered: " + inputValue)
                 console.log("You entered: " + inputValue)
             });
         </script>
