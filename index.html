@@ -11,18 +11,26 @@
 <body>
     <div class="container">
         <h1>Stream</h1>
-        <form id="myForm">
+        <form id="searchForm">
             <input type="text" name="searchInput" id="searchInput" placeholder="Enter something..." required>
-            <button type="click" id="searchButton">Submit</button>
+            <button onclick="search1337x(event)" id="searchButton">Search</button>
         </form>
         <script>
-            document.getElementById('searchButton').addEventListener('click', function (event) {
+            function search1337x(event) {
+                event.preventDefault();
+                const url = 'https://1337x.to';
 
-                var inputValue = document.getElementById('searchInput').value;
-                var yesOrNo = confirm('hello: ' + inputValue);
-                console.log('yesOrNo: ' + yesOrNo)
+                console.log(getUserInput());
+            }
+        </script>
 
-            });
+        <script>
+            /**
+             * @brief Get user input from search text input
+             */
+            function getUserInput() {
+                return document.getElementById('searchInput').value
+            }
         </script>
     </div>
 
