@@ -20,7 +20,8 @@
                 event.preventDefault();
                 const url = 'https://1337x.to';
 
-                console.log(getUserInput());
+                console.log(buildQuery());
+
             }
         </script>
 
@@ -30,6 +31,10 @@
              */
             function getUserInput() {
                 return document.getElementById('searchInput').value
+            }
+
+            function buildQuery() {
+                return getUserInput().replace(/ /g, '+')
             }
         </script>
     </div>
